@@ -1,5 +1,6 @@
 Ruby 2.7.0 crash on exit if there is an active RUBY_INTERNAL_EVENT_GC_EXIT tracepoint:
 
+```
 [BUG] object allocation during garbage collection phase
 ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-darwin19]
 
@@ -30,6 +31,7 @@ c:0001 p:0001 s:0003 E:002690 (none) [FINISH]
 /Users/byroot/.rubies/ruby-2.7.0/bin/ruby(rb_ec_cleanup+0x2de) [0x10f8dc35e]
 /Users/byroot/.rubies/ruby-2.7.0/bin/ruby(ruby_run_node+0x5f) [0x10f8dc4ff]
 /Users/byroot/.rubies/ruby-2.7.0/bin/ruby(main+0x5d) [0x10f833d0d]
+```
 
 It also crash in other circumstances, but I'm not able to reproduce them as easily.
 
